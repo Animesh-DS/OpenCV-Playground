@@ -1,9 +1,18 @@
-import cv2 as cv   
+import cv2
 
-img = cv.imread('Extra/123.jpeg')
-cv.imshow('123',img)
-cv.waitKey(0)
-#wait key is the amount of time the image is shown for
+# read image
+img = cv2.imread("Image/image.png")
+# img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+img = cv2.cvtColor(img, cv2.COLOR_BGR2LUV)
+# img = cv2.cvtColor(img, cv2.COLOR_BGR2YUV)
+# img = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
+# img = cv2.cvtColor(img, cv2.COLOR_BGR2YCrCb)
 
-#when dimenstions of image are greater than the dimentions of the display the image shown is chopped
-#since OpenCV has no way of handeling this
+negative = 255 - img
+
+cv2.imshow("Kingfisher", img)
+cv2.imshow("Negative", negative)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
