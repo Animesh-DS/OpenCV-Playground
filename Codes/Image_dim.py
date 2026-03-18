@@ -1,7 +1,7 @@
 import cv2
 
 # read image
-img = cv2.imread("Image/image.png")
+img = cv2.imread("Image/123.jpeg")
 
 print("Shape:", img.shape)
 print("Height:", img.shape[0])
